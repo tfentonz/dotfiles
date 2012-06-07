@@ -95,13 +95,3 @@ map <leader>vs :Rview show<cr>
 
 " Edit .vimrc
 nmap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-
-if has("gui_running")
-  set guifont=Menlo:h16
-  " Hide toolbar
-  set guioptions-=T
-  set background=dark
-  colorscheme herald
-  set columns=80
-  set lines=48
-endif
