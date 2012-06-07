@@ -1,0 +1,15 @@
+[user]
+	name = Tom Fenton
+	email = tom@ncs.co.nz
+
+[alias]
+	st = status
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+
+[github]
+	user = tfentonz
+
