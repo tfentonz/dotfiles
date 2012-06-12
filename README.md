@@ -14,6 +14,7 @@ Vim
 * [vim-coffee-script](http://www.vim.org/scripts/script.php?script_id=3590) CoffeeScript support for vim
 * [vim-less](https://github.com/groenewege/vim-less) vim syntax for LESS (dynamic CSS)
 * [vim-rails](https://github.com/tpope/vim-rails) Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more 
+* [vim-surround](https://github.com/tpope/vim-surround) quoting/parenthesizing made simple
 
 ### Color scheme
 
