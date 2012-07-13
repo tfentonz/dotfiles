@@ -66,6 +66,9 @@ map <leader>l :set list!<cr>
 " Toggle line numbers
 map <leader>n :set number!<cr>
 
+" Toggle paste mode
+map <leader>p :set paste!<cr>
+
 " Remove object
 map <leader>o :!rm -f %.OB<cr>
 
