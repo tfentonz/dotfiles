@@ -47,6 +47,9 @@ syntax on
 set background=dark
 colorscheme herald
 
+" Don't give the intro message when starting Vim
+set shortmess+=I
+
 " NERD Tree
 map <F5> :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\~$', '.OB$', '.gz$', '.vim$']
