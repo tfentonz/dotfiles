@@ -4,9 +4,6 @@
 [submodule "vim/bundle/vim-magiq"]
 	path = vim/bundle/vim-magiq
 	url = git://github.com/tfentonz/vim-magiq.git
-[submodule "vim/bundle/vim-pipe"]
-	path = vim/bundle/vim-pipe
-        url = git://github.com/krisajenkins/vim-pipe
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
