@@ -1,6 +1,6 @@
 [user]
 	name = Tom Fenton
-	email = tom@ncs.co.nz
+	email = tom.fenton@xtra.co.nz
 
 [alias]
 	st = status
@@ -13,3 +13,11 @@
 [github]
 	user = tfentonz
 
+[core]
+	excludesfile = ~/.gitignore_global
+
+[diff]
+	external = ~/bin/git-diff-cmd.sh
+
+[push]
+	default = matching
