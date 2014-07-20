@@ -14,7 +14,7 @@ snippet BEGIN
 	EXIT
 snippet OPEN
 	OPEN]
-		${1}
+		FILE ${1:1}
 	EXIT
 snippet READ
 	READ]
@@ -48,11 +48,19 @@ snippet SJOIN
 	MV ${3:$2} SJOINF
 	MV "OPEN" SFILEOP
 snippet ST
-	ST ${1} ${2:WA}
+	ST ${1} ${2} ${3:WA}
+snippet STSALP
+	ST SALP ${1} SALP
+snippet STWA
+	ST WA ${1} WA
 snippet HIDDEN
 	MV "${1:name}" VATTR
 	MV ${2} SALP
 	PER HIDDEN
+snippet HINPUT
+	MV "id='${1}' type='${2:text}' name='${3}' size='${4}' maxlength='${5:$4}'" VATTR
+	MV ${6} SALP
+	PER HINPUT
 snippet TH
 	MV "${1}" SALP
 	PER TH
@@ -63,3 +71,22 @@ snippet TDTEXT
 	PER TDTEXT
 snippet TRNEXT
 	PER TRNEXT
+snippet col
+	DY "    <col style='width: ${1}'>"
+snippet colgroup
+	DY "  <colgroup>"
+	DY "    <col style='width: ${1:25}%'>"
+	${2}
+	DY "  </colgroup>"
+snippet script
+	DY "<script>"
+	${1}
+	DY "</script>"
+snippet scriptsrc
+	DY "<script src='${1}.js'></script>"
+snippet table
+	DY "<table role='presentation'>"
+snippet td
+	DY "  <td>"
+	${1}
+	DY "  </td>"
