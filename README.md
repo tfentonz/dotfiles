@@ -1,10 +1,18 @@
-dotfiles
-========
+# dotfiles
 
 My personal dotfiles (bash, git, vim)
 
-Vim
----
+## Installation
+
+    $ git clone git://github.com/tfentonz/dotfiles.git
+    
+Vim plugins are installed as git submodules. Check these out by running the following commands:
+
+    $ cd dotfiles
+    $ git submodule init
+    $ git submodule update
+
+## VIM
 
 ### Utility
 
