@@ -3,6 +3,7 @@
 	email = tom.fenton@xtra.co.nz
 
 [alias]
+  co = checkout
 	st = status
 
 [color]
