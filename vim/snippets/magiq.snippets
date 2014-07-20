@@ -1,0 +1,65 @@
+snippet DYOFF
+	*DYOFF*
+snippet SV
+	SIMPLE VARIABLES
+snippet CV
+	COMPLEX VARIABLES
+snippet PV
+	PROCEDURAL VARIABLES
+snippet EV
+	END VARIABLES
+snippet BEGIN
+	BEGIN]
+		${1}
+	EXIT
+snippet OPEN
+	OPEN]
+		${1}
+	EXIT
+snippet READ
+	READ]
+		${1}
+	EXIT
+snippet STEPS
+	STEPS]
+		MV " " WA
+		ST "F:/${1:u/tmp/steps_}" $No WA
+		MV WA STEPS
+		MV "DY::Y" STEPS
+	EXIT
+snippet CO
+	CO ${1} = ${2}
+snippet DY
+	DY "${1}"
+snippet IF
+	IF ${1:condition}
+		${2}
+	END-IF
+snippet IFE
+	IF ${1:condition}
+		${2}
+	ELSE
+		${3}
+	END-IF
+snippet MV
+	MV ${1} ${2:WA}
+snippet SJOIN
+	MV ${1} V${2}
+	MV ${3:$2} SJOINF
+	MV "OPEN" SFILEOP
+snippet ST
+	ST ${1} ${2:WA}
+snippet HIDDEN
+	MV "${1:name}" VATTR
+	MV ${2} SALP
+	PER HIDDEN
+snippet TH
+	MV "${1}" SALP
+	PER TH
+snippet TDNULL
+	PER TDNULL
+snippet TDTEXT
+	MV ${1} SALP
+	PER TDTEXT
+snippet TRNEXT
+	PER TRNEXT
