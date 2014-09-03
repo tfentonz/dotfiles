@@ -16,7 +16,7 @@ Vundle plugin is installed as a git submodule. Check this out by running the fol
 
 ### Utilities
 
-* [Vundle](https://github.com/gmarik/Vundle.vim) Vundle, the plug-in manager for Vim.
+* [Vundle](https://github.com/gmarik/Vundle.vim) The plug-in manager for Vim.
 * [CtrlP](https://github.com/kien/ctrlp.vim) Fuzzy file, buffer, mru, tag, etc finder.
 * [The NERD tree](https://github.com/scrooloose/nerdtree) A tree explorer plugin for vim.
 * [snipMate](https://github.com/msanders/snipmate.vim) snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim.
