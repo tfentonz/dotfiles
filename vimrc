@@ -1,9 +1,21 @@
-filetype off
-filetype plugin indent on
-
 set nocompatible
+filetype off
 
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tfentonz/vim-magiq'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+
+filetype plugin indent on
 
 " Security
 set modelines=0
@@ -77,6 +89,9 @@ map <leader>o :!rm -f %.OB<cr>
 
 " Clean whitespace
 map <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'a'
 
 " Ruby on Rails
 let rails_menu = 2
