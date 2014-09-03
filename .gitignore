@@ -1,2 +1,10 @@
 my.cnf
 ssh
+vim/bundle/ctrlp.vim
+vim/bundle/nerdtree
+vim/bundle/snipmate.vim
+vim/bundle/vim-coffee-script
+vim/bundle/vim-less
+vim/bundle/vim-magiq
+vim/bundle/vim-rails
+vim/bundle/vim-surround
