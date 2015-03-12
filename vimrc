@@ -1,20 +1,20 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'groenewege/vim-less'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tfentonz/vim-magiq'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tfentonz/vim-magiq'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
