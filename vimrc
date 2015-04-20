@@ -12,6 +12,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'tfentonz/vim-magiq'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -96,6 +97,17 @@ map <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
 " CtrlP
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
 let g:ctrlp_working_path_mode = 'a'
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Ruby on Rails
 let rails_menu = 2
