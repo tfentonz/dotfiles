@@ -95,7 +95,7 @@ map <leader>o :!rm -f %.OB<cr>
 map <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
 
 " CtrlP
-let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
+let g:ctrlp_custom_ignore = { 'dir': 'db/sphinx\|node_modules' }
 let g:ctrlp_working_path_mode = 'a'
 
 " Syntastic
