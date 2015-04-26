@@ -63,6 +63,9 @@ syntax on
 set background=dark
 colorscheme herald
 
+" Disable automatic insert of the current comment leader
+autocmd FileType * setlocal formatoptions-=r
+
 " Don't give the intro message when starting Vim
 set shortmess+=I
 
