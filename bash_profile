@@ -8,6 +8,8 @@ alias clear="osascript -e 'if application \"Terminal\" is frontmost then tell ap
 alias mou="open -a Mou"
 alias mvi="mvim"
 alias mvidiff="mvimdiff"
+alias svnedit='vim $(svn st | grep ^[AM] | cut -c9- | sort)'
+alias tree='tree -I node_modules'
 
 export EDITOR=vim
 export VISUAL=vim
