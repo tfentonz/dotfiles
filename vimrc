@@ -82,6 +82,9 @@ au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.rake set filetype=ruby
 au BufNewFile,BufRead *.sql  set filetype=mysql
 
+" Substitute YYYYMMDD date with current date
+map <leader>d :s/\d\{8\}/\=strftime('%Y%m%d')/<cr>
+
 " Toggle unprintable characters
 map <leader>l :set list!<cr>
 
