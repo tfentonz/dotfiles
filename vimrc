@@ -118,16 +118,16 @@ let g:syntastic_check_on_wq = 0
 
 " Ruby on Rails
 let rails_menu = 2
-map <leader>m :Rmodel<cr>
-map <leader>v :Rview<space>
-map <leader>c :Rcontroller<cr>
-map <leader>h :Rhelper<cr>
-map <leader>e :Renvironment<cr>
-map <leader>vf :Rview _form<cr>
-map <leader>ve :Rview edit<cr>
-map <leader>vi :Rview index<cr>
-map <leader>vn :Rview new<cr>
-map <leader>vs :Rview show<cr>
+map <leader>m :Emodel<cr>
+map <leader>v :Eview<space>
+map <leader>c :Econtroller<cr>
+map <leader>h :Ehelper<cr>
+map <leader>e :Eenvironment<cr>
+map <leader>vf :Eview _form<cr>
+map <leader>ve :Eview edit<cr>
+map <leader>vi :Eview index<cr>
+map <leader>vn :Eview new<cr>
+map <leader>vs :Eview show<cr>
 
 " Edit vimrc
 nmap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
