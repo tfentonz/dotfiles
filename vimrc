@@ -8,6 +8,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
@@ -41,7 +42,10 @@ set visualbell
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-set laststatus=2 " always
+set laststatus=2 " always show statusline
+
+" Use 256 colors
+set t_Co=256
 
 " Leader
 let mapleader = ","
