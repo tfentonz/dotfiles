@@ -14,3 +14,19 @@ alias tree='tree -I node_modules'
 export EDITOR=vim
 export VISUAL=vim
 export SVN_EDITOR=vi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# powerline
+powerline-daemon -q
+
+function _update_ps1() {
+  PS1="$(~/powerline-shell.py --colorize-hostname $? 2>/dev/null)"
+}
+
+[ "$TERM" != "linux" ] && {
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+}
+
+# ssh tab completion
+complete -o default -o nospace -W "$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject { |host| host.match(/\*|\?/) } if $_.match(/^\s*Host\s+/);' < $HOME/.ssh/config)" scp sftp ssh
