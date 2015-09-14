@@ -1,0 +1,27 @@
+{
+	"segments": {
+		"right": [
+			{
+				"function": "powerline.segments.common.wthr.weather",
+				"unit": "C",
+				"location_query": "christchurch, new zealand",
+				"temp_coldest": "-7",
+				"temp_hottest": "40"
+			},
+			{
+				"function": "powerline.segments.common.time.date"
+			},
+			{
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+				}
+			},
+			{
+				"function": "powerline.segments.common.net.hostname"
+			}
+		]
+	}
+}
