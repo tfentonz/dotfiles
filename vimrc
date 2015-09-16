@@ -9,12 +9,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-Plugin 'msanders/snipmate.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'msanders/snipmate.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'groenewege/vim-less'
 Plugin 'tfentonz/vim-magiq'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -74,12 +74,6 @@ autocmd FileType * setlocal formatoptions-=r
 " Don't give the intro message when starting Vim
 set shortmess+=I
 
-" NERD Tree
-map <F5> :NERDTreeToggle<cr>
-let NERDTreeIgnore = ['\~$', '.OB$', '.gz$', '.vim$']
-let NERDTreeQuitOnOpen = 1
-let NERDTreeShowHidden = 0
-
 " Various syntax stuff
 let cobol_legacy_code = 1
 au BufNewFile,BufRead *.C    set filetype=cobol
@@ -106,32 +100,46 @@ map <leader>o :!rm -f %.OB<cr>
 map <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
 
 " CtrlP
-let g:ctrlp_custom_ignore = { 'dir': 'db/sphinx\|node_modules\|vendor/cache' }
-let g:ctrlp_working_path_mode = 'a'
+if exists('g:loaded_ctrlp')
+  let g:ctrlp_custom_ignore = { 'dir': 'db/sphinx\|node_modules\|vendor/cache' }
+  let g:ctrlp_working_path_mode = 'a'
+endif
+
+" NERD Tree
+if exists('loaded_nerd_tree')
+  map <F5> :NERDTreeToggle<cr>
+  let NERDTreeIgnore = ['\~$', '.OB$', '.gz$', '.vim$']
+  let NERDTreeQuitOnOpen = 1
+  let NERDTreeShowHidden = 0
+endif
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+if exists('g:loaded_syntastic_plugin')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
 
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+  let g:syntastic_javascript_checkers = ['jshint']
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+endif
 
 " Ruby on Rails
-let rails_menu = 2
-map <leader>m :Emodel<cr>
-map <leader>v :Eview<space>
-map <leader>c :Econtroller<cr>
-map <leader>h :Ehelper<cr>
-map <leader>e :Eenvironment<cr>
-map <leader>vf :Eview _form<cr>
-map <leader>ve :Eview edit<cr>
-map <leader>vi :Eview index<cr>
-map <leader>vn :Eview new<cr>
-map <leader>vs :Eview show<cr>
+if exists('g:loaded_rails')
+  let rails_menu = 2
+  map <leader>m :Emodel<cr>
+  map <leader>v :Eview<space>
+  map <leader>c :Econtroller<cr>
+  map <leader>h :Ehelper<cr>
+  map <leader>e :Eenvironment<cr>
+  map <leader>vf :Eview _form<cr>
+  map <leader>ve :Eview edit<cr>
+  map <leader>vi :Eview index<cr>
+  map <leader>vn :Eview new<cr>
+  map <leader>vs :Eview show<cr>
+endif
 
 " Edit vimrc
 nmap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
