@@ -29,4 +29,4 @@ function _update_ps1() {
 }
 
 # ssh tab completion
-complete -o default -o nospace -W "$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject { |host| host.match(/\*|\?/) } if $_.match(/^\s*Host\s+/);' < $HOME/.ssh/config)" scp sftp ssh
+complete -o default -o nospace -W "$(gawk '/^\s*Host\s+[^*?]/ { sub(/^\s*Host\s+/, ""); gsub(/\s+/, "\n"); print }' $HOME/.ssh/config)" scp sftp ssh

@@ -36,7 +36,7 @@ set expandtab
 set encoding=utf-8
 set scrolloff=3
 set autoindent
-set showmode
+set noshowmode
 set showcmd
 set visualbell
 set ttyfast
