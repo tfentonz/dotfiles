@@ -99,6 +99,9 @@ map <leader>o :!rm -f %.OB<cr>
 " Clean whitespace
 map <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
 
+" Replace Ruby 1.8 hash syntax
+map <leader>s :%s/\([^:]\):\(\w\w*\)\s*=>\s*/\1\2: /g<cr>
+
 " CtrlP
 if exists('g:loaded_ctrlp')
   let g:ctrlp_custom_ignore = { 'dir': 'db/sphinx\|node_modules\|vendor/cache' }
