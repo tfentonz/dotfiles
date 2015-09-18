@@ -43,6 +43,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2 " always show statusline
+set relativenumber
 
 " Use 256 colors
 set t_Co=256
@@ -88,7 +89,7 @@ map <leader>d :s/\d\{8\}/\=strftime('%Y%m%d')/<cr>
 map <leader>l :set list!<cr>
 
 " Toggle line numbers
-map <leader>n :set number!<cr>
+map <leader>n :set relativenumber!<cr>
 
 " Toggle paste mode
 map <leader>p :set paste!<cr>
