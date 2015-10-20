@@ -1,5 +1,6 @@
 set -o vi
 
+alias ascii="man ascii | col -b | grep -A 55 'The octal set'"
 alias be="bundle exec"
 alias ber="bundle exec ruby"
 alias berc="bundle exec rails c"
@@ -8,6 +9,8 @@ alias clear="osascript -e 'if application \"Terminal\" is frontmost then tell ap
 alias mou="open -a Mou"
 alias mvi="mvim"
 alias mvidiff="mvimdiff"
+alias sd='svn diff'
+alias ss='svn status'
 alias svnedit='vim $(svn st | grep ^[AM] | cut -c9- | sort)'
 alias tree='tree -I node_modules'
 
@@ -30,3 +33,13 @@ function _update_ps1() {
 
 # ssh tab completion
 complete -o default -o nospace -W "$(gawk '/^\s*Host\s+[^*?]/ { sub(/^\s*Host\s+/, ""); gsub(/\s+/, "\n"); print }' $HOME/.ssh/config)" scp sftp ssh
+
+# functions
+cdp () {
+  TEMP_PWD=`pwd`
+  while ! [ -f Gemfile ]; do
+    cd ..
+  done
+  OLDPWD=$TEMP_PWD
+  unset TEMP_PWD
+}
