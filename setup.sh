@@ -2,6 +2,7 @@
 
 SYMLINK_LIST="bash_profile
 bashrc
+colordiffrc
 gitconfig
 gitignore_global
 gvimrc
