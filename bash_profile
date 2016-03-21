@@ -42,7 +42,7 @@ function _update_ps1() {
 complete -o default -o nospace -W "$(gawk '/^\s*Host\s+[^*?]/ { sub(/^\s*Host\s+/, ""); gsub(/\s+/, "\n"); print }' $HOME/.ssh/config)" scp sftp ssh
 
 # tmuxinator tab completion
-complete -o default -o nospace -W "$(cd /Users/tom/.tmuxinator; ls -1 | sed -e 's/\.yml$//')" mux
+complete -o default -o nospace -W "$(cd $HOME/.tmuxinator; ls -1 | sed -e 's/\.yml$//')" mux
 
 # functions
 cdp () {
