@@ -10,13 +10,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'
-Plugin 'tfentonz/vim-magiq'
-Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 
 call vundle#end()
