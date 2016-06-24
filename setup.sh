@@ -8,6 +8,7 @@ gitignore_global
 gvimrc
 inputrc
 npmrc
+psqlrc
 rvmrc
 tmux.conf
 vim
@@ -28,5 +29,8 @@ git submodule update
 
 # Install Vundle.vim Plugins.
 vim +PluginInstall +qall
+
+# MacDown command line
+ln -s /Applications/MacDown.app/Contents/SharedSupport/bin/macdown ~/bin
 
 exit 0
