@@ -1,2 +1,3 @@
 \set HISTFILE ~/.psql_history
 \set PROMPT1 '%[%033[1m%[%033[36m%]%m %[%033[95m%]%/ %[%033[90m%]%R%#%[%033[0m%] '
+\pset null 'NULL'
