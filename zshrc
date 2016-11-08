@@ -60,6 +60,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/tomfenton/.rvm/
 # Postgres.app
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin"
 
+# Automatically update
+DISABLE_UPDATE_PROMPT=true
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
