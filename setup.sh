@@ -10,6 +10,7 @@ inputrc
 npmrc
 psqlrc
 rvmrc
+screenrc
 tmux.conf
 vim
 vimrc
