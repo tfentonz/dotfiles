@@ -77,6 +77,7 @@ set shortmess+=I
 let cobol_legacy_code = 1
 au BufNewFile,BufRead *.C    set filetype=cobol
 au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.md   set filetype=markdown
 au BufNewFile,BufRead *.rake set filetype=ruby
 au BufNewFile,BufRead *.sql  set filetype=mysql
 
