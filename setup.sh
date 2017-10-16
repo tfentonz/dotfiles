@@ -8,6 +8,7 @@ gitignore_global
 gvimrc
 inputrc
 npmrc
+pip
 psqlrc
 rvmrc
 screenrc
