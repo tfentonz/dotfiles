@@ -8,14 +8,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'lifepillar/pgsql.vim'
 
 call vundle#end()
 
@@ -74,12 +75,11 @@ autocmd FileType * setlocal formatoptions-=r
 set shortmess+=I
 
 " Various syntax stuff
-let cobol_legacy_code = 1
 au BufNewFile,BufRead *.C    set filetype=cobol
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.md   set filetype=markdown
 au BufNewFile,BufRead *.rake set filetype=ruby
-au BufNewFile,BufRead *.sql  set filetype=mysql
+au BufNewFile,BufRead *.sql  set filetype=pgsql
 
 " Substitute YYYYMMDD date with current date
 map <leader>d :s/\d\{8\}/\=strftime('%Y%m%d')/<cr>
