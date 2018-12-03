@@ -3,7 +3,7 @@
 	email = tom.fenton@xtra.co.nz
 
 [alias]
-  co = checkout
+	co = checkout
 	st = status
 
 [color]
@@ -19,6 +19,9 @@
 
 [diff]
 	external = ~/bin/git-diff-cmd.sh
+
+[pager]
+        branch = false
 
 [push]
 	default = matching
