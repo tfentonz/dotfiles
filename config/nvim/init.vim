@@ -8,10 +8,16 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'dense-analysis/ale'
+
 " Initialize plugin system
 call plug#end()
 
-" enable loading the plugin files and the indent file for specific file types
+" Enable loading the plugin files and the indent file for specific file types
 filetype plugin indent on
 
 " Tabs/spaces
@@ -58,7 +64,7 @@ syntax on
 set background=dark
 colorscheme gruvbox
 
-" don't give the intro message when starting Vim
+" Don't give the intro message when starting Vim
 set shortmess+=I
 
 " Toggle unprintable characters

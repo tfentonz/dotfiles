@@ -14,7 +14,6 @@ rvmrc
 screenrc
 tmux.conf
 vim
-vimrc
 wgetrc"
 
 BASE_DIR=$(cd $(dirname $0); pwd)
@@ -26,11 +25,17 @@ do
   ln -s $BASE_DIR/$FILE ~/.$FILE
 done
 
+# Nvim config
+ln -nfs $BASE_DIR/config ~/.config
+
+# Install the Vim-Plug Plugin manager
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install NeoVim Plugins
+nvim +PlugInstall +qall
+
 git submodule init
 git submodule update
-
-# Install Vundle.vim Plugins.
-vim +PluginInstall +qall
 
 # MacDown command line
 ln -s /Applications/MacDown.app/Contents/SharedSupport/bin/macdown ~/bin
