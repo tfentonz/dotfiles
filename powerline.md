@@ -10,10 +10,10 @@
 
 Homebrew
 
-    brew install python3 socat
+    brew install python3 socat xrandr
 
 Python packages
 
     pip install --upgrade pip
-    pip install psutil mercurial pygit2 bzr pyuv
+    pip install psutil mercurial pygit2 bzr pyuv i3ipc
     pip install powerline-status

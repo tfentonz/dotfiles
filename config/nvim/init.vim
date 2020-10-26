@@ -14,6 +14,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 
+Plug 'vimwiki/vimwiki'
+
 " Initialize plugin system
 call plug#end()
 

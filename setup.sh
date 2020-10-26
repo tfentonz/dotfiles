@@ -38,6 +38,7 @@ git submodule init
 git submodule update
 
 # MacDown command line
+mkdir ~/bin
 ln -s /Applications/MacDown.app/Contents/SharedSupport/bin/macdown ~/bin
 
 exit 0

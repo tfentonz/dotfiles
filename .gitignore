@@ -1,5 +1,8 @@
 my.cnf
 ssh
+config/configstore/
+config/gh/hosts.yml
+config/nvim/plugged/
 vim/bundle/ctrlp.vim
 vim/bundle/snipmate.vim
 vim/bundle/vim-coffee-script

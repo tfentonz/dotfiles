@@ -1,27 +1,54 @@
 [user]
 	name = Tom Fenton
-	email = tom.fenton@xtra.co.nz
-
-[alias]
-	co = checkout
-	st = status
-
-[color]
-	branch = auto
-	diff = auto
-	status = auto
+	email = tom@mediasuite.co.nz
 
 [github]
 	user = tfentonz
 
 [core]
-	excludesfile = ~/.gitignore_global
+	editor = nvim
 
 [diff]
-	external = ~/bin/git-diff-cmd.sh
+	tool = vimdiff
 
-[pager]
-        branch = false
+[difftool]
+	prompt = false
 
-[push]
-	default = matching
+[merge]
+	tool = vimdiff
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	whitespace = red reverse
+
+[color "status"]
+	diff = auto
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[commit]
+	verbose = true
+
+[url "git://github.com"]
+	insteadOf = "github:"
+
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+
+[alias]
+	dad = !curl -w \"\\n\" https://icanhazdadjoke.com/ && git add
+	ls = log --stat --pretty=short --graph
+	pwd = !"cd -- ${GIT_PREFIX:.}; pwd"
+	run = !cd -- ${GIT_PREFIX:-.} && npm run
+	stu = status --untracked-files=no
+	unstage = reset HEAD
