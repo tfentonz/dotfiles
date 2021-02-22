@@ -8,13 +8,17 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
+Plug 'itspriddle/vim-shellcheck'
 
 Plug 'vimwiki/vimwiki'
+
+Plug 'pearofducks/ansible-vim'
 
 " Initialize plugin system
 call plug#end()
