@@ -67,7 +67,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git postgres sublime vi-mode web-search)
+plugins=(git rbenv vi-mode web-search)
 # ember-cli alias eb overrides aws elastic beanstalk shell
 
 source $ZSH/oh-my-zsh.sh
