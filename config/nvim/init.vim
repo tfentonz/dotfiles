@@ -16,9 +16,7 @@ Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'itspriddle/vim-shellcheck'
 
-Plug 'vimwiki/vimwiki'
-
-Plug 'pearofducks/ansible-vim'
+" Plug 'vimwiki/vimwiki'
 
 " Initialize plugin system
 call plug#end()
@@ -52,9 +50,9 @@ set ignorecase
 set smartcase
 set showmatch
 set hlsearch
-map <leader><space> :noh<cr>
-nmap <tab> %
-vmap <tab> %
+map <Leader><Space> :noh<CR>
+nmap <Tab> %
+vmap <Tab> %
 
 " No arrows
 noremap <Up> <Nop>
@@ -70,14 +68,11 @@ syntax on
 set background=dark
 colorscheme gruvbox
 
-" Don't give the intro message when starting Vim
-set shortmess+=I
-
 " Toggle unprintable characters
-map <leader>l :set list!<cr>
+map <Leader>l :set list!<CR>
 
 " Toggle line numbers
-map <leader>n :set relativenumber!<cr>
+map <Leader>n :set relativenumber!<CR>
 
 " Toggle paste mode
-map <leader>p :set paste!<cr>
+map <Leader>p :set paste!<CR>
